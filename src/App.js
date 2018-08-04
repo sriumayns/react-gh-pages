@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import {Test} from './components/Test';
 import {Hello} from './components/Hello';
+import {Home} from './components/Home';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Link to='/test'>Test</Link><br/>
             <Link to='/hello'>Hello</Link>
             <Switch>
+              <Route exact path='/' component={Home} />
               <Route exact path='/test' component={Test} />
               <Route exact path='/hello' component={Hello} />
             </Switch>
