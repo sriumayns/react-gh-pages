@@ -21,7 +21,7 @@ class App extends Component {
             <Link to='/test'>Test</Link><br/>
             <Link to='/hello'>Hello</Link>
             <Switch>
-              <Route exact path='/test' component={Test} />
+              <Route exact path='${process.env.PUBLIC_URL}/test' component={Test} />
               <Route exact path='/hello' component={Hello} />
             </Switch>
           </div>
