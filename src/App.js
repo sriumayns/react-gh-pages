@@ -16,12 +16,12 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div>
             <Link to='/test'>Test</Link><br/>
             <Link to='/hello'>Hello</Link>
             <Switch>
-              <Route exact path='${process.env.PUBLIC_URL}/test' component={Test} />
+              <Route exact path='/test' component={Test} />
               <Route exact path='/hello' component={Hello} />
             </Switch>
           </div>
